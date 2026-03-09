@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aatheshkumar | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="portfolio.css">
+</head>
+
+<body>
+  <header>
+    <div><a href="#about">Portfolio</a></div>
+    <button class="nav-toggle" aria-label="Toggle navigation menu" aria-expanded="false" id="navToggle">
+      <span></span><span></span><span></span>
+    </button>
+    <nav id="mainNav">
+      <ul class="nav-links" id="navLinks">
+        <li class="active-nav" data-section="about"><a href="#about">About</a></li>
+        <li data-section="skills"><a href="#skills">Skills</a></li>
+        <li data-section="projects"><a href="#projects">Projects</a></li>
+        <li data-section="contact"><a href="#contact">Contact us</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section id="about">
+    <div id="about_me_container">
+      <h1>I'm Aatheshkumar</h1>
+      <div id="about_me">
+        <p>A curious and enthusiastic learner with a strong interest in exploring new concepts and solving challenging problems. I enjoy working in group projects, sharing ideas, and learning from others. I believe in a practical approach to learning, where knowledge is applied to create meaningful and effective solutions.</p>
+      </div>
+    </div>
+    <div class="profile-photo-wrap">
+      <img class="profile-photo" src="assets/aathesh.png" alt="Aatheshkumar" />
+    </div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills">
+    <h1>Skills</h1>
+    <div class="techStacks" id="skillsGrid"></div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects">
+    <h1>Projects</h1>
+    <div id="project-navbar">
+      <ul id="filterList"></ul>
+    </div>
+    <div class="projects-grid" id="projectsGrid"></div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <h1 class="footer-title">Contact Us</h1>
+    <ul class="footer-details">
+      <li><span>Zoho ID:</span> ZSTTK-405/25</li>
+      <li><span>Zoho Mail:</span> aathesh.r@zohocorp.com</li>
+    </ul>
+    <div class="footer-icons">
+      <a class="icon-link" href="https://github.com/Aathesh-kumar" target="_blank" rel="noreferrer" aria-label="GitHub profile">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M12 .5C5.65.5.5 5.65.5 12a11.5 11.5 0 0 0 7.86 10.93c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.35-3.88-1.35-.52-1.33-1.28-1.68-1.28-1.68-1.05-.72.08-.7.08-.7 1.16.08 1.77 1.2 1.77 1.2 1.03 1.76 2.7 1.25 3.36.95.1-.75.4-1.25.73-1.54-2.55-.29-5.23-1.28-5.23-5.7 0-1.26.45-2.3 1.2-3.1-.13-.29-.52-1.47.1-3.07 0 0 .98-.31 3.2 1.19a11 11 0 0 1 5.82 0c2.22-1.5 3.2-1.2 3.2-1.2.62 1.6.23 2.78.1 3.08.75.8 1.2 1.84 1.2 3.1 0 4.43-2.68 5.4-5.24 5.69.41.35.77 1.03.77 2.08v3.08c0 .31.2.67.8.56A11.5 11.5 0 0 0 23.5 12C23.5 5.65 18.35.5 12 .5Z" />
+        </svg>
+      </a>
+      <a class="icon-link" href="https://www.codewars.com/users/Aatheshkumar" target="_blank" rel="noreferrer" aria-label="Codewars profile">
+        <img class="codewars-icon" src="assets/codewar.png" alt="Codewars" />
+      </a>
+    </div>
+  </footer>
+</body>
+<script src="portfolio.js"></script>
+</html>

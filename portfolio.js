@@ -55,20 +55,20 @@ skills.forEach(skill => {
 
 // ===== PROJECTS =====
 const projects = [
-     { id: 1, image: 'assets/pulse24x7.png', name: 'Pulse24x7', stack: 'React,Java,Tomcat', link: 'https://github.com/Aathesh-kumar/trade-show-team-project' },
+     { id: 1, image: 'assets/pulse24x7.png', name: 'Pulse24x7', stack: 'React,Java,Tomcat', link: 'https://github.com/Aathesh-kumar/trade-show-team-project', group: true },
      { id: 2, image: 'assets/linked_list.jpeg', name: 'Linked List', stack: 'Java', link: 'https://github.com/Aathesh-kumar/Linked-List-Implementation' },
      { id: 3, image: 'assets/planet.png', name: 'Planet', stack: 'NodeJS', link: 'https://github.com/Aathesh-kumar/Planet' },
      { id: 4, image: 'assets/hotel.png', name: 'Hotel Room Booking System', stack: 'Java,Mysql', link: 'https://github.com/Aathesh-kumar/Hotel-Room-Booking-System-JDBC' },
      { id: 5, image: 'assets/sumplete.png', name: 'Sumplete', stack: 'HTML,CSS,JS', link: 'https://aatheshr-0xv3ggfm-8443.zcodecorp.in/JavaScriptassign/Mini%20Project/sumplete.html' },
      { id: 6, image: 'assets/word_game.png', name: 'Word Game', stack: 'HTML,CSS,JS', link: 'https://aatheshr-0xv3ggfm-8443.zcodecorp.in/JavaScriptassign/Task%20/typeTask.html' },
      { id: 7, image: 'assets/supercell.png', name: 'Supercell', stack: 'HTML,CSS', link: 'https://aatheshr-0xv3ggfm-8443.zcodecorp.in/test/project/homepage.html' },
-     { id: 8, image: 'assets/fylo.png', name: 'Fylo', stack: 'HTML,CSS', link: 'https://aatheshr-0xv3ggfm-8443.zcodecorp.in/test/assignment013/recreate.html' },
-     { id: 9, image: 'assets/slopey.png', name: 'Slopey', stack: 'Scratch', link: 'https://scratch.mit.edu/projects/1190078948/' },
-     { id: 10, image: 'assets/stencil.png', name: 'Stencil Art', stack: 'Scratch', link: 'https://scratch.mit.edu/projects/1186826550/' },
-     { id: 11, image: 'assets/stencil.png', name: 'Stencil Art', stack: 'HTML,CSS', link: 'https://scratch.mit.edu/projects/1186826550/' },
+     { id: 8, image: 'assets/Ramnath.png', name: 'Ramnath kovind', stack: 'HTML,CSS', link: 'https://cherry6628.github.io/RamNathKovindWebsite/', group: true },
+     { id: 9, image: 'assets/fylo.png', name: 'Fylo', stack: 'HTML,CSS', link: 'https://aatheshr-0xv3ggfm-8443.zcodecorp.in/test/assignment013/recreate.html' },
+     { id: 10, image: 'assets/slopey.png', name: 'Slopey', stack: 'Scratch', link: 'https://scratch.mit.edu/projects/1190078948/' },
+     { id: 11, image: 'assets/stencil.png', name: 'Stencil Art', stack: 'Scratch', link: 'https://scratch.mit.edu/projects/1186826550/' },
 ];
 
-const filters = ['All', 'Java', 'JavaScript', 'HTML&CSS', 'Scratch'];
+const filters = ['All', 'Java', 'JavaScript', 'HTML&CSS', 'Scratch', 'Gruop'];
 let activeFilter = 'All';
 
 const filterList = document.getElementById('filterList');
@@ -89,12 +89,15 @@ filters.forEach(f => {
 });
 
 function matchesFilter(project, filter) {
-     if (filter === 'All') return true;
+     const normalizedFilter = String(filter).toLowerCase();
+     if (normalizedFilter === 'all') return true;
+     if (project.group === true && normalizedFilter !== 'gruop') return false;
      const items = project.stack.toLowerCase().split(',').map(s => s.trim());
-     if (filter === 'Java') return items.includes('java');
-     if (filter === 'JavaScript') return items.includes('js') || items.includes('javascript') || items.includes('nodejs');
-     if (filter === 'HTML&CSS') return items.includes('html') && items.includes('css') && !items.includes('js') && !items.includes('javascript') && !items.includes('nodejs');
-     if (filter === 'Scratch') return items.includes('scratch');
+     if (normalizedFilter === 'java') return items.includes('java');
+     if (normalizedFilter === 'javascript') return items.includes('js') || items.includes('javascript') || items.includes('nodejs');
+     if (normalizedFilter === 'html&css') return items.includes('html') && items.includes('css') && !items.includes('js') && !items.includes('javascript') && !items.includes('nodejs');
+     if (normalizedFilter === 'scratch') return items.includes('scratch');
+     if (normalizedFilter === 'gruop') return project.group === true;
      return true;
 }
 

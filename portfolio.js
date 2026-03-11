@@ -68,7 +68,7 @@ const projects = [
      { id: 11, image: 'assets/stencil.png', name: 'Stencil Art', stack: 'Scratch', link: 'https://scratch.mit.edu/projects/1186826550/' },
 ];
 
-const filters = ['All', 'Java', 'JavaScript', 'HTML&CSS', 'Scratch', 'Gruop'];
+const filters = ['All', 'Java', 'JavaScript', 'HTML&CSS', 'Scratch', 'Group'];
 let activeFilter = 'All';
 
 const filterList = document.getElementById('filterList');

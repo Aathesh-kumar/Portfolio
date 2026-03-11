@@ -186,8 +186,7 @@ header li.active-nav a {
 }
 
 #about_me {
-     width: 600px;
-     height: 300px;
+     width: 650px;
      background-color: #EDF1FB;
      border: 2px #F2F6FC solid;
      box-shadow: 4px 7px rgba(0, 0, 0, 0.08);

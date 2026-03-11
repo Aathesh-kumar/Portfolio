@@ -91,7 +91,7 @@ filters.forEach(f => {
 function matchesFilter(project, filter) {
      const normalizedFilter = String(filter).toLowerCase();
      if (normalizedFilter === 'all') return true;
-     if (project.group === true && normalizedFilter !== 'gruop') return false;
+     if (project.group === true && normalizedFilter !== 'group') return false;
      const items = project.stack.toLowerCase().split(',').map(s => s.trim());
      if (normalizedFilter === 'java') return items.includes('java');
      if (normalizedFilter === 'javascript') return items.includes('js') || items.includes('javascript') || items.includes('nodejs');

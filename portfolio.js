@@ -97,7 +97,7 @@ function matchesFilter(project, filter) {
      if (normalizedFilter === 'javascript') return items.includes('js') || items.includes('javascript') || items.includes('nodejs');
      if (normalizedFilter === 'html&css') return items.includes('html') && items.includes('css') && !items.includes('js') && !items.includes('javascript') && !items.includes('nodejs');
      if (normalizedFilter === 'scratch') return items.includes('scratch');
-     if (normalizedFilter === 'gruop') return project.group === true;
+     if (normalizedFilter === 'group') return project.group === true;
      return true;
 }
 
